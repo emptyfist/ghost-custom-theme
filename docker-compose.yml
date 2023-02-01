@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  blog:
+    image: ghost
+    restart: always
+    ports:
+      - 8080:2368
+    volumes:
+      - ./custom-ghost-theme:/var/lib/ghost/content/themes/custom-ghost-theme/
+    environment:
+      url: http://localhost:8080
+      NODE_ENV: development
