@@ -7,7 +7,7 @@
   "database": {
     "client": "sqlite3",
     "connection": {
-      "filename": "C:\\Tools\\Projects\\ghost-custom-theme\\src\\content\\data\\ghost-local.db"
+      "filename": "YourPathToGitRepoDirectory\src\\content\\data\\ghost-local.db"
     }
   },
   "mail": {
@@ -21,6 +21,6 @@
   },
   "process": "local",
   "paths": {
-    "contentPath": "C:\\Tools\\Projects\\ghost-custom-theme\\src\\content"
+    "contentPath": "YourPathToGitRepoDirectory\\src\\content"
   }
 }
