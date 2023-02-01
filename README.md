@@ -48,38 +48,6 @@ services:
       NODE_ENV: development
 ```
 
-In the volume section, you pass your file. In my case, I added a specific file in my Ghost theme folder.
-
-```
-version: '3.8'
-services:
-  blog:
-    image: ghost
-    restart: always
-    ports:
-      - 8080:2368
-    volumes:
-      - ./assets:/var/lib/ghost/content/themes/fastest/assets
-      - ./partials:/var/lib/ghost/content/themes/fastest/partials
-      - ./author.hbs:/var/lib/ghost/content/themes/fastest/author.hbs
-      - ./default.hbs:/var/lib/ghost/content/themes/fastest/default.hbs
-      - ./error-404.hbs:/var/lib/ghost/content/themes/fastest/error-404.hbs
-      - ./error.hbs:/var/lib/ghost/content/themes/fastest/error.hbs
-      - ./gulpfile.js:/var/lib/ghost/content/themes/fastest/gulpfile.js
-      - ./index.hbs:/var/lib/ghost/content/themes/fastest/index.hbs
-      - ./package-lock.json:/var/lib/ghost/content/themes/fastest/package-lock.json
-      - ./package.json:/var/lib/ghost/content/themes/fastest/package.json
-      - ./page.hbs:/var/lib/ghost/content/themes/fastest/page.hbs
-      - ./post.hbs:/var/lib/ghost/content/themes/fastest/post.hbs
-      - ./query.hbs:/var/lib/ghost/content/themes/fastest/query.hbs
-      - ./tag.hbs:/var/lib/ghost/content/themes/fastest/tag.hbs
-      - ./readme.md:/var/lib/ghost/content/themes/fastest/readme.md
-    environment:
-      url: http://localhost:8080
-      NODE_ENV: development
-```
-<sub>fastest is your own custom theme folder. You should change this depends on your decision</sub>
-
 [^1]: Some cases, ghost command is not recognized in your terminal. ATM, you have to register ***yarn bin*** or ***npm bin*** path to your environment variables. Also you have to run ghost install local command in your empty directory cuz it happens error if directory is not empty
 
 [^2]: If you get an error when running ghost start in Ubuntu, run the following command: `ghost start --no-setup-linux-user`.
