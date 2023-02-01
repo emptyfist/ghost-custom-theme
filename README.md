@@ -31,7 +31,7 @@ To start local development server, run the `ghost start` command in your termina
 
 ### Setup environment using a Docker Image
 
-To start the setup, you'll need the docker-compose.yml file in your root project folder. Then run the docker-compose up command in your terminal.
+To start the setup, you'll need the `docker-compose.yml` file in your root project folder. Then run the docker-compose up command in your terminal.
 
 ```
 version: '3.8'
