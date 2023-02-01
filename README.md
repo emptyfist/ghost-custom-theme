@@ -80,7 +80,7 @@ services:
 ```
 <sub>fastest is your own custom theme folder. You should change this depends on your decision</sub>
 
-## Run Ghost from this repository
+## Run Ghost from this repository (Not recommended, following above steps either use locally or docker image)
 
 There are some symbolic links exists in this repository and you have to install some node modules.
 
@@ -95,12 +95,12 @@ mklink /D YourPathToGitRepo/src/content/themes/YourThemeName YourPathToGitRepo/s
   "database": {
     "client": "sqlite3",
     "connection": {
-      "filename": "C:\\Tools\\Projects\\ghost-custom-theme\\src\\content\\data\\ghost-local.db"
+      "filename": "PathToRepo\\src\\content\\data\\ghost-local.db"
     }
   },
   ...
   "paths": {
-    "contentPath": "C:\\Tools\\Projects\\ghost-custom-theme\\src\\content"
+    "contentPath": "PathToRepo\\ghost-custom-theme\\src\\content"
   }
   ...
 }
