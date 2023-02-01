@@ -82,11 +82,30 @@ services:
 
 ## Run Ghost from this repository
 
-There are some shortcuts exists in this repository and you have to install some node modules.
+There are some symbolic links exists in this repository and you have to install some node modules.
 
-1. go into `src` and make shortcut named `current` to `src/versions/5.33.3`
-2. go into `src/content/themes` and make shortcut named `xxx` to `src/current/content/themes/xxx`.
-3. `yarn install` command from `src/src/versions/5.33.3`
+1. Make symbolic links as following(Only discribed for Windows)
+```
+mklink /D YourPathToGitRepo/src/current YourPathToGitRepo/src/versions/5.33.3
+mklink /D YourPathToGitRepo/src/content/themes/YourThemeName YourPathToGitRepo/src/versions/5.33.3/content/themes/YourThemeName
+```
+2. Open src/config.development.json and change some fields
+```
+  ...
+  "database": {
+    "client": "sqlite3",
+    "connection": {
+      "filename": "C:\\Tools\\Projects\\ghost-custom-theme\\src\\content\\data\\ghost-local.db"
+    }
+  },
+  ...
+  "paths": {
+    "contentPath": "C:\\Tools\\Projects\\ghost-custom-theme\\src\\content"
+  }
+  ...
+}
+
+```
 
 [^1]: Some cases, ghost command is not recognized in your terminal. ATM, you have to register ***yarn bin*** or ***npm bin*** path to your environment variables. Also you have to run ghost install local command in your empty directory cuz it happens error if directory is not empty
 
