@@ -80,33 +80,6 @@ services:
 ```
 <sub>fastest is your own custom theme folder. You should change this depends on your decision</sub>
 
-## Run Ghost from this repository (Not recommended, following above steps either use locally or docker image)
-
-There are some symbolic links exists in this repository and you have to install some node modules.
-
-1. Make symbolic links as following(Only discribed for Windows)
-```
-mklink /D YourPathToGitRepo/src/current YourPathToGitRepo/src/versions/5.33.3
-mklink /D YourPathToGitRepo/src/content/themes/YourThemeName YourPathToGitRepo/src/versions/5.33.3/content/themes/YourThemeName
-```
-2. Open src/config.development.json and change some fields
-```
-  ...
-  "database": {
-    "client": "sqlite3",
-    "connection": {
-      "filename": "PathToRepo\\src\\content\\data\\ghost-local.db"
-    }
-  },
-  ...
-  "paths": {
-    "contentPath": "PathToRepo\\ghost-custom-theme\\src\\content"
-  }
-  ...
-}
-
-```
-
 [^1]: Some cases, ghost command is not recognized in your terminal. ATM, you have to register ***yarn bin*** or ***npm bin*** path to your environment variables. Also you have to run ghost install local command in your empty directory cuz it happens error if directory is not empty
 
 [^2]: If you get an error when running ghost start in Ubuntu, run the following command: `ghost start --no-setup-linux-user`.
