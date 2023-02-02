@@ -48,6 +48,10 @@ services:
       NODE_ENV: development
 ```
 
+## Create theme using `create-ghost-theme`
+
+Install `create-ghost-theme` cli first from [here](https://www.npmjs.com/package/create-ghost-theme)
+
 [^1]: Some cases, ghost command is not recognized in your terminal. ATM, you have to register ***yarn bin*** or ***npm bin*** path to your environment variables. Also you have to run ghost install local command in your empty directory cuz it happens error if directory is not empty
 
 [^2]: If you get an error when running ghost start in Ubuntu, run the following command: `ghost start --no-setup-linux-user`.
