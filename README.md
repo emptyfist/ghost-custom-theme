@@ -56,6 +56,10 @@ Run terminal inside your custom theme directory and `yarn start` to run as devel
 
 If you wanna update theme automatically during development, you have to run ghost in development method using `ghost start -D`.
 
+To make production, use `yarn build` command.
+
+## Build theme production
+
 [^1]: Some cases, ghost command is not recognized in your terminal. ATM, you have to register ***yarn bin*** or ***npm bin*** path to your environment variables. Also you have to run ghost install local command in your empty directory cuz it happens error if directory is not empty
 
 [^2]: If you get an error when running ghost start in Ubuntu, run the following command: `ghost start --no-setup-linux-user`.
