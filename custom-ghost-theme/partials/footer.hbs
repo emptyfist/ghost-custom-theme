@@ -1,2 +1,53 @@
-<div class="bg-slate-700 w-full my-12 py-2">
+<div class="footer-wrapper w-screen bg-black">
+    <div class="max-w-[1360px] mx-auto flex justify-between py-32">
+        <div class="w-2/3">
+            <div class="w-3/4">
+                <div class="flex flex-col gap-y-12">
+                    {{#if @site.title}}
+                    <span class="text-white text-[3rem]">{{@site.title}}</span>
+                    {{/if}}
+                    <div class="flex flex-col gap-y-4 text-neutral-400">
+                        <p>At the Periphery, we believe that Web3 technology holds the key to shaping a better future for society. As a media bridge connecting six leading Web3 companies, we strive to shed light on the cutting-edge advancements in this field and their potential to revolutionize industries and improve our daily lives.</p>
+                        <p>Through in-depth analysis and expert insights, we aim to make sense of this constantly evolving landscape and uncover the new possibilities that Web3 presents. Join us on our journey to explore the frontiers of Web3 and discover how it will shape the world of tomorrow.</p>
+                        <button class="bg-yellow-300 rounded-3xl font-bold text-[1rem] px-8 py-3 text-black w-fit">Let's Talk</button>
+                    </div>
+                    <div class="footer-nav-wrapper">
+                        <div class="nav-wrapper">
+                            <span>Navigate</span>
+                        </div>
+                        <div class="nav-wrapper">
+                            <span>Follow Us</span>
+                            <div>
+                                {{#if @custom.twitter_url}}
+                                <a href="{{@custom.twitter_url}}" target="_blank">Twitter</a>
+                                {{/if}}
+                                {{#if @custom.linkedin_url}}
+                                <a href="{{@custom.linkedin_url}}" target="_blank">LinkedIn</a>
+                                {{/if}}
+                                {{#if @custom.discord_url}}
+                                <a href="{{@custom.discord_url}}" target="_blank">Discord</a>
+                                {{/if}}
+                                {{#if @custom.reddit_url}}
+                                <a href="{{@custom.reddit_url}}" target="_blank">Reddit</a>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="nav-wrapper">
+                            <span>Email Us</span>
+                            {{#if @custom.email_addr}}
+                            <span>{{@custom.email_addr}}</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            {{#if @site.logo}}
+            <figma>
+                <img class="footer-logo opacity-20" src="{{@site.logo}}" alt="{{@site.title}}"/>
+            </figma>
+            {{/if}}
+        </div>
+    </div>
 </div>

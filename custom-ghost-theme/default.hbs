@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html class="scroll-smooth" lang="{{@site.locale}}">
 
 <head>
 
@@ -18,16 +18,14 @@
 
     </head>
 
-<body class="{{body_class}}">
-
-
+<body class="{{body_class}} overflow-x-hidden overflow-y-auto">
     {{> header}}
 
-
-
-    {{{body}}}
-
-
+    <div class="w-screen py-16 px-12">
+        <div class="flex justify-between max-w-[1360px] mx-auto">
+            {{{body}}}
+        </div>
+    </div>
 
     {{> footer}}
 
