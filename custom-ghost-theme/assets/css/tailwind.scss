@@ -1,7 +1,14 @@
+@import "./header.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --color-black: 0 0 0;
+    }
+}
 /* .kg-width-full and .kg-width-wide Add both class in @layer components */
 
 .kg-width-wide {
