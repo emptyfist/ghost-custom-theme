@@ -1,0 +1,15 @@
+<div class="nav-wrapper">
+{{#if isSecondary}}
+    <ul class="flex flex-row  justify-center" >
+        {{#foreach navigation}}
+            <li class="block text-center text-[0.70rem] p-2 mx-2 nav nav-{{slug}}"><a href="{{url}}" >{{slug}}</a></li>
+        {{/foreach}}
+    </ul>
+{{else}}
+    <ul class="flex flex-row justify-center" >
+        {{#foreach navigation}}
+            <li class="block text-center text-[0.70rem] p-2 mx-2 nav nav-{{slug}} {{#if current}} nav-current{{/if}}"><a href="{{url}}" >{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+{{/if}}
+</div>

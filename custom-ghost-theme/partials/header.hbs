@@ -1,0 +1,10 @@
+<div class="header-wrapper w-screen py-8">
+    <div class="flex justify-between max-w-[1360px] mx-auto my-auto">
+        {{#if @site.logo}}
+            <a href="{{@site.url}}">
+                <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}"/>
+            </a>
+        {{/if}}
+        {{ navigation}}
+    </div>
+</div>
