@@ -1,0 +1,26 @@
+<div class="grid grid-cols-[2fr_1fr] gap-x-8 subscribe-wrapper">
+    <div class="flex w-full bg-[url('../images/slider01.svg')] rounded-xl bg-cover bg-center h-[240px]">
+        <div class="grid grid-cols-[4fr_3fr_2fr]">
+            <div class="flex flex-col px-8 pt-12 pb-4 justify-between">
+                <span class="text-[#E0AA00] font-bold text-[10px]">FEATURED</span>
+                <span class="text-white font-bold text-[22px]">Lorem ipsum dolor sitamet consectetur.</span>
+                <span class="text-white text-[14px]">Adipiscing elit aliquam aliquam diam sit amet elit hendrerit rutrum. Nam egestas laoreet </span>
+                <span class="text-white text-[12px]"> By Faculty Group - Dec 15, 2022</span>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="flex flex-col w-full justify-between bg-[url('../images/subscribe-bg.svg')] rounded-xl bg-cover bg-center h-[240px] px-8 pt-6 pb-4">
+        {{#if @site.logo}}
+        <figma>
+            <img class="subscribe-logo" src="{{@site.logo}}" alt="{{@site.title}}"/>
+        </figma>
+        {{/if}}
+        <span class="font-bold text-[20px] text-white">Get the latest market trends right to your inbox</span>
+        <div class="grid grid-cols-[2fr_1fr] gap-x-4">
+            <input class="rounded-xl text-white bordered border-white border-2 bg-black/10 pl-6 py-4 white-placeholder" placeholder="Your email address" />
+            <button class="bg-white rounded-xl text-[#E0AA00] font-bold text-[14px]">Subscribe</button>
+        </div>
+    </div>
+</div>

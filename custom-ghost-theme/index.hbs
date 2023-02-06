@@ -1,18 +1,19 @@
 {{!< default}} 
 
 <div class="body-wrapper"> 
-    {{#if @site.title}}
-        <span class="font-bold text-[60px]">{{@site.title}}</span>
-    {{/if}}
-    <div class="flex justify-between">
-        <span class="font-bold text-[#E0AA00] text-[18px]">A blog by Faculty Group</span>
-        <select class="rounded-lg bg-black/5 p-3">
-            <option value="All">All companies</option>
-            <option value="Faculty">Faculty Group</option>
-            <option value="X8C">X8C</option>
-        </select>
+    <div class="title-wrapper">
+        {{#tag}}
+        <span class="font-bold text-[60px]"># {{name}}</span>
+        {{/tag}}
+        <div class="subtitle-wrapper">
+            <span class="font-bold text-[#E0AA00] text-[18px]">A blog by Faculty Group</span>
+            <select class="rounded-lg bg-black/5 p-3">
+                <option value="All">All companies</option>
+                <option value="Faculty">Faculty Group</option>
+                <option value="X8C">X8C</option>
+            </select>
+        </div>
     </div>
-    {{#foreach posts}}
-        {{> card}}
-    {{/foreach}}
+    {{>"subscribe-wrapper"}}
+    {{>"posts-wrapper"}}
 </div>

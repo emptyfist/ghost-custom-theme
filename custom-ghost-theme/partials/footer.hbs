@@ -1,5 +1,5 @@
 <div class="footer-wrapper w-screen bg-black">
-    <div class="max-w-[1360px] mx-auto flex justify-between py-32">
+    <div class="px-4 xl:px-0 max-w-[1280px] mx-auto flex justify-between py-32">
         <div class="w-2/3">
             <div class="w-3/4">
                 <div class="flex flex-col gap-y-12">
@@ -45,12 +45,10 @@
                 </div>
             </div>
         </div>
-        <div>
-            {{#if @site.logo}}
-            <figma>
-                <img class="footer-logo opacity-20" src="{{@site.logo}}" alt="{{@site.title}}"/>
-            </figma>
-            {{/if}}
-        </div>
+        {{#if @site.logo}}
+        <figma>
+            <img class="footer-logo opacity-20" src="{{@site.logo}}" alt="{{@site.title}}"/>
+        </figma>
+        {{/if}}
     </div>
 </div>
