@@ -1,8 +1,6 @@
-{{!< default}} 
-
-<div class="body-wrapper"> 
-    {{#if @site.title}}
-        <span class="font-bold text-[60px]">{{@site.title}}</span>
+<aside>
+    {{#if title}}
+    <span class="font-bold text-[60px]">{{title}}</span>
     {{/if}}
     <div class="flex justify-between">
         <span class="font-bold text-[#E0AA00] text-[18px]">A blog by Faculty Group</span>
@@ -15,4 +13,4 @@
     {{#foreach posts}}
         {{> card}}
     {{/foreach}}
-</div>
+</aside>
