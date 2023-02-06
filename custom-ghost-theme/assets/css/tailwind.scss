@@ -1,4 +1,6 @@
 @import "./header.scss";
+@import "./body.scss";
+@import "./footer.scss";
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +9,15 @@
 @layer base {
     :root {
         --color-black: 0 0 0;
+        font-family: 'Arial';
+
+        body {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     }
 }
 /* .kg-width-full and .kg-width-wide Add both class in @layer components */

@@ -1,0 +1,26 @@
+.footer-wrapper {
+    @apply text-white;
+
+    .footer-logo {
+        flex-shrink: 0;
+        margin: 0 auto;
+        max-height: 130px;
+        filter: grayscale(1);
+    }
+
+    .footer-nav-wrapper {
+        @apply flex justify-between text-[1rem];
+
+        .nav-wrapper {
+            @apply flex flex-col gap-y-4;
+            
+            >:first-child {
+                @apply text-neutral-600 pb-4;
+            }
+
+            >:last-child {
+                @apply flex flex-col text-neutral-400;
+            }
+        }
+    }
+}

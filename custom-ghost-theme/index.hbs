@@ -1,9 +1,19 @@
 {{!< default}} 
 
-
-<div class="w-[90rem] mx-auto ">
-    {{#foreach posts}}
-            {{> card}}
-
-    {{/foreach}}
+<div class="body-wrapper"> 
+    <div class="title-wrapper">
+        {{#tag}}
+        <span class="font-bold text-[60px]"># {{name}}</span>
+        {{/tag}}
+        <div class="subtitle-wrapper">
+            <span class="font-bold text-[#E0AA00] text-[18px]">A blog by Faculty Group</span>
+            <select class="rounded-lg bg-black/5 p-3">
+                <option value="All">All companies</option>
+                <option value="Faculty">Faculty Group</option>
+                <option value="X8C">X8C</option>
+            </select>
+        </div>
+    </div>
+    {{>"subscribe-wrapper"}}
+    {{>"posts-wrapper"}}
 </div>

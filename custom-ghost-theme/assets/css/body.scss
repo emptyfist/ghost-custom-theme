@@ -1,0 +1,23 @@
+.body-wrapper {
+    @apply flex w-full gap-y-4 md:gap-y-6 flex-col;
+
+    .subtitle-wrapper {
+        @apply flex justify-between items-center;
+    }
+
+    .subscribe-logo {
+        width: 36px;
+        height: 36px;
+        filter: brightness(0) invert(1);
+    }
+
+    .white-placeholder {
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+        }
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+}

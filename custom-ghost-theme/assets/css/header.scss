@@ -8,6 +8,10 @@
     .nav-wrapper {
         .nav {
             color: rgba(var(--color-black) / 0.8);
-        }    
+        }   
+
+        .nav-current {
+            @apply font-bold;
+        }
     }
 }
